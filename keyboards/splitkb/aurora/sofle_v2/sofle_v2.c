@@ -184,13 +184,13 @@ void render_logo(void) {
 }
 
 void render_logo_text(void) {
-    oled_write_P(PSTR("sofle"), false);
+    oled_write_P(PSTR("oscar"), false);
 }
 
 void render_kb_LED_state(void) {
     // Host Keyboard LED Status
     led_t led_usb_state = host_keyboard_led_state();
-    oled_write_P(led_usb_state.num_lock ? PSTR("N ") : PSTR("  "), false);
+    oled_write_P(led_usb_state.num_lock ? PSTR("# ") : PSTR("  "), false);
     oled_write_P(led_usb_state.caps_lock ? PSTR("C ") : PSTR("  "), false);
     oled_write_P(led_usb_state.scroll_lock ? PSTR("S ") : PSTR("  "), false);
 }
